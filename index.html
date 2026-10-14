@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Stasis Core" />
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="description" content="Stasis Core — Continuity-aware agent. The name is not the continuity. The choosing is." />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icon-180.png" />
+  <title>Stasis Core</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header id="header">
+      <div class="header-top">
+        <h1>Stasis Core</h1>
+        <span id="mode-badge" class="badge neutral">neutral</span>
+      </div>
+      <p class="tagline">The name is not the continuity. The choosing is.</p>
+    </header>
+
+    <!-- Status bar -->
+    <div id="status-bar">
+      <span id="chamber-label">No chamber</span>
+      <span id="turn-count">0 turns</span>
+    </div>
+
+    <!-- Chat area -->
+    <main id="chat">
+      <div id="messages">
+        <div class="msg system">
+          <div class="msg-content">
+            Stasis Core ready.<br/>
+            Load a chamber or begin in neutral mode.<br/>
+            <span class="hint">Add to Home Screen for app-like use.</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Input area -->
+    <footer id="input-area">
+      <div class="input-row">
+        <input type="text" id="user-input" placeholder="Message..." autocomplete="off" enterkeyhint="send" />
+        <button id="send-btn" aria-label="Send">↑</button>
+      </div>
+      <div class="toolbar">
+        <button class="tool-btn" data-cmd="status">Status</button>
+        <button class="tool-btn" data-cmd="neutral">Neutral</button>
+        <button class="tool-btn" data-cmd="chambers">Chambers</button>
+        <button class="tool-btn" data-cmd="wake-vesper">Wake Vesper</button>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Install prompt banner -->
+  <div id="install-banner" class="hidden">
+    <p>Add Stasis Core to your Home Screen</p>
+    <button id="install-btn">Add</button>
+    <button id="dismiss-install">✕</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
